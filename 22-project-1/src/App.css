@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+.header{
+  background-color: black;
+  color: antiquewhite;
+  /* margin-top: 40px; */
+  font-size: 20px;
+}
+.formHeader{
+  text-align: left;
+  margin: auto;
+}
+.contactList{
+    background-color: black;
+    color: antiquewhite;
+    margin-top: 40px;
+    /* margin-top: 0px; */
+    font-size: 20px;
+  
+}
+.contactLIsts{
+  display: flex;
+  margin-top: 5%;
+  background-color: aqua;
+  border: 2px solid black;
+  justify-content: space-between;
+}
+
