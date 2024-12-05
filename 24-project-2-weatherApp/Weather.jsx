@@ -5,15 +5,22 @@ import axios from "axios";
 function Weather() {
   const [city, setCity] = useState();
   const [weather, setWeather] = useState();
+  const APIkey = "3c237cb8596e930747e90a16cd87c63f";
   const handleCityChange = (event) => {
     setCity(event.target.value);
   };
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={'cfc9e7c94bb8b66f704ec1f5ed1d6a87'}`
+      // const response = await axios.get(
+      //   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={'a3dd3f4126ef7baa0b45d410fb78a2e9'} `
+      // );
+
+      const newRespo = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`
       );
-      setWeather(response);
+      console.log(newRespo, "NEWW");
+
+      setWeather(newRespo);
     } catch (error) {
       console.log("api call", error);
     }
